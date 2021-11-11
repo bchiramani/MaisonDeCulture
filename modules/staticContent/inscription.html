@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="copyright" content="MACode ID, https://macodeid.com/">
+
+    <title>SeoGram - SEO Agency Template</title>
+
+    <link rel="stylesheet" href="../../assets/css/maicons.css">
+
+    <link rel="stylesheet" href="../../assets/css/bootstrap.css">
+
+    <link rel="stylesheet" href="../../assets/vendor/animate/animate.css">
+
+    <link rel="stylesheet" href="../../assets/css/theme.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/tailwind.output.css" />
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src=../../assets/js/script.js></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white sticky" data-offset="500">
+            <div class="container">
+                <a href="#" class="navbar-brand">Maison de culture<span class="text-primary"> Battan</span></a>
+
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+                <div class="navbar-collapse collapse" id="navbarContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="index.html">Acceuil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="presentation.html">Presentation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="clubs.html" onclick="loadClubsOnCulbsPage()">Clubs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="evenement.html">Evenement</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacter.html">Nous Contacter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary ml-lg-2" href="inscription.html">S'inscrire</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary ml-lg-2" href="Connexion.html">Se connecter</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900">
+        <div class="flex-1 h-full max-w-4xl mx-auto overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-800">
+            <div class="flex flex-col overflow-y-auto md:flex-row">
+                <div class="h-32 md:h-auto md:w-1/2">
+                    <img aria-hidden="true" class="object-cover w-full h-full dark:hidden" src="../../assets/gif/Collab.gif" alt="img" />
+                </div>
+                <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
+                    <div class="w-full">
+                        <h1 class="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200">
+                            Inscription
+                        </h1>
+                        <label class="block text-sm">
+                            <span class="text-gray-700 dark:text-gray-400">Nom</span>
+                            <input id="inputName"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            />
+                        </label>
+                        <span id="firstNameError"></span>
+                        <label class="block text-sm">
+                            <span class="text-gray-700 dark:text-gray-400">Prenom</span>
+                            <input id="inputLastname"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            />
+                        </label>
+                        <span id="lastNameError"></span>
+                        <label class="block text-sm">
+                            <span class="text-gray-700 dark:text-gray-400">Email</span>
+                            <input id="inputEmail"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            />
+                        </label>
+                        <span id="emailError"></span>
+                        <span id="emailExist"></span>
+                        <label class="block text-sm">
+                            <span class="text-gray-700 dark:text-gray-400">Numero de telephone</span>
+                            <input id="inputPhone" 
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            />
+                        </label>
+                        <span id="phoneError"></span>
+                        <label class="block text-sm">
+                            <span class="text-gray-700 dark:text-gray-400">Date de naissance</span>
+                            <input type="date"
+                            id="inputDate"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            />
+                        </label>
+                        <span id="dateError"></span>
+                        <label class="block text-sm">
+                            <span class="text-gray-700 dark:text-gray-400">Adresse</span>
+                            <input id="inputAddress"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            />
+                        </label>
+                        <span id="addressError"></span>
+
+                        <label class="block mt-4 text-sm">
+                            <span class="text-gray-700 dark:text-gray-400">Mot de passe</span>
+                            <input id="inputPassword"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            type="password"
+                            />
+                        </label>
+                        <span id="passwordError"></span>
+                        <label class="block mt-4 text-sm">
+                            <span class="text-gray-700 dark:text-gray-400">Confirmer mot de passe</span>
+                            <input id="inputConfirmassword"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            type="password"
+                            />
+                        </label>
+                        <span id="verifPasswordError"></span>
+
+                        <!-- You should use a button here, as the anchor is only used for the example  -->
+                        <a class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                            onclick="signup()">
+                            s'inscrire
+                        </a>
+
+                        <hr class="my-8" />
+                        <p class="mt-1">
+                            <a class="text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline" href="./Connexion.html">
+                                se connecter?
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="page-footer bg-image" style="background-image: url(../assets/img/world_pattern.svg);">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-4 py-3">
+                    <h3>Maison de Culture Batan </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero amet, repellendus eius blanditiis in iusto eligendi iure.</p>
+                    <br>
+                    <div class="social-media-button">
+                        <a href="#"><span class="mai-logo-facebook-f"></span></a>
+                        <a href="#"><span class="mai-logo-google-plus-g"></span></a>
+                        <a href="#"><span class="mai-logo-instagram"></span></a>
+                        <a href="#"><span class="mai-logo-youtube"></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 py-3">
+                    <h5>Notre Etablissement</h5>
+                    <ul class="footer-menu">
+                        <li><a href="#">Presentation</a></li>
+                        <li><a href="#">Clubs</a></li>
+                        <li><a href="#">Evenements</a></li>
+                        <li><a href="#">Nous contacter</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 py-3">
+                    <h5>A propos de nous</h5>
+                    <p>1114 Battan,Manouba</p>
+                    <a href="#" class="footer-link">+216 99 999 9999</a>
+                    <br>
+                    <a href="#" class="footer-link">MaisondecultureBatan@gmail.com</a>
+                </div>
+
+            </div>
+
+            <p class="text-center" id="copyright">Copyright &copy; 2021. Disigned par <a href="https://macodeid.com/" target="_blank">MACode ID</a> Developpé par Bchir Amani</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/jquery-3.5.1.min.js"></script>
+
+    <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../../assets/js/google-maps.js"></script>
+
+    <script src="../../assets/vendor/wow/wow.min.js"></script>
+
+    <script src="../../assets/js/theme.js"></script>
+
+
+</body>
+
+</html>
